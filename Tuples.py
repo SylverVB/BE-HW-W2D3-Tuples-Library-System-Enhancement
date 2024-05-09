@@ -58,9 +58,8 @@ def add_book(library):
 
 
 def library_system():
-    # Initialize an empty dictionary to store service tickets
     existing_library = [("1984", "George Orwell"), ("Brave New World", "Aldous Huxley")]
-    library = [tuple(item.lower() for item in book) for book in existing_library]   # Convert the library items to lower case so that we can compare them
+    library = [tuple(item.lower() for item in book) for book in existing_library]   # Converts the library items to lower case so that we can compare them
 
     while True:
         print("\nWelcome to our Library System!")
@@ -71,7 +70,7 @@ def library_system():
         choice = input("\nWhat would you like to do? Enter your choice from 1 to 2: \n")
         if choice == "1":
             library = add_book(library)
-            updated_library = [tuple(item.title() for item in book) for book in library]    # Convert the library items back to title()
+            updated_library = [tuple(item.title() for item in book) for book in library]    # Converts the library items back to title()
             print("\n")
             print(updated_library, "\n")
         elif choice == "2":
@@ -79,7 +78,7 @@ def library_system():
             break
         else:
             print("\nPlease enter a valid response!\n")
-# Call the main function to start the program
+
 library_system()
 
 print("===============================================\n")
